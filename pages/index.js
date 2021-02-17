@@ -31,7 +31,7 @@ export default function Home() {
           className={styles.button}
           style={{
             backgroundColor: isLight ? "#fff" : "red",
-            color: isLight ? "blue" : 'white'
+            color: isLight ? "red" : 'white'
           }}
         >
           {isLight ? "Focus Mode" : "Calm Mode"}
