@@ -1,10 +1,26 @@
 import { useState } from "react";
+import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
   const [isLight, setLightTheme] = useState(true);
 
   return (
+    <>
+    <Head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WMF6C94VC"></script>
+    <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments)}
+                gtag('js', new Date());
+          
+                gtag('config', 'G-7WMF6C94VC');
+              `
+            }}
+          />
+    </Head>
     <div
       style={{
         width: "100%",
@@ -50,5 +66,6 @@ export default function Home() {
         }}
       />
     </div>
+    </>
   );
 }
